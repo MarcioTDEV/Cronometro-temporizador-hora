@@ -1,0 +1,103 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(0, 35, 35);
+    background-image: linear-gradient(to left, rgb(0, 64, 64),rgb(0, 156, 156),rgb(0, 209, 209));
+    animation: degrade2 3s infinite alternate;
+    background-size: 500% 100%;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.container>div{
+    margin: 20px;
+    padding: 30px;
+}
+
+
+.box-relogio{
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 1.6em;
+}
+.box-relogio div{
+    padding: 30px;
+}
+.box-relogio div p{
+    font-size: 0.6em;
+}
+.box-cronometro{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr,1fr;
+    padding: 10px;
+}
+.botoes-cronometro{
+    grid-column: 1/3;
+}
+button{
+    padding: 20px;
+    font-size: 0.9em;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
+@keyframes degrade2{
+    0%{
+        background-position-x:0% ;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+.horas, .minutos, .segundos{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.display-temp-clock{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+}
+.display-temp-input{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: black;
+    padding: 30px 10px;
+}
+
+
+.temp-button{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+
+.temp-button button{
+    padding: 20px;
+}
+
+input{
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.temp-button button:disabled{
+    background-color: gray;
+}
+
+.none{
+    display: none;
+}

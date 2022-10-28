@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timezone</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./icon.jpg">
+</head>
+
+<body>
+    <div class="container">
+
+
+
+        <div class="box-cronometro">
+            <div class="horas">
+                <h1 data-cronometro="hora">00</h1>
+                <p>Horas</p>
+            </div>
+
+            <div class="minutos">
+                <h1 data-cronometro="minuto">00</h1>
+                <p>Minutos</p>
+            </div>
+
+            <div class="segundos">
+                <h1 data-cronometro="segundo">00</h1>
+                <p>Segundos</p>
+            </div>
+
+
+            <button data-cronometro="iniciar">Iniciar</button>
+            <button data-cronometro="pausar">Pausar</button>
+            <button data-cronometro="zerar">Zerar</button>
+
+        </div>
+
+        <div class="box-relogio">
+
+            <div class="horas">
+                <h1 data-relogio="hora">00</h1>
+                <p>Horas</p>
+            </div>
+
+            <div class="minutos">
+                <h1 data-relogio="minuto">00</h1>
+                <p>Minutos</p>
+            </div>
+
+            <div class="segundos">
+                <h1 data-relogio="segundo">00</h1>
+                <p>Segundos</p>
+            </div>
+
+        </div>
+
+
+
+        <div class="box-temporizador">
+
+
+            <!-- antes, o display será um input com botao iniciar e os demais desativados
+        quando o iniciar for ativado, ele será desabilitado, o display vai mudar e as demais opções ficarão disponíveis
+        -->
+
+            <div class="display-temp">
+
+
+                <div class="display-temp-input">
+                    <div class="horas">
+                        <input type="number" max="60" min="0" data-input="hora">
+                        <p>Horas</p>
+                    </div>
+    
+                    <div class="minutos">
+                        <input type="number" max="60" min="0" data-input="minuto">
+                        <p>Minutos</p>
+                    </div>
+    
+                    <div class="segundos">
+                        <input type="number" max="60" min="0" data-input="segundo" >
+                        <p>Segundos</p>
+                    </div>
+                </div>
+                </div>
+
+
+                <div class="display-temp-clock none">
+
+                    <div class="horas">
+                        <h1 data-temp="hora">00</h1>
+                        <p>Horas</p>
+                    </div>
+    
+                    <div class="minutos">
+                        <h1 data-temp="minuto" >00</h1>
+                        <p>Minutos</p>
+                    </div>
+    
+                    <div class="segundos">
+                        <h1 data-temp="segundo">00</h1>
+                        <p>Segundos</p>
+                    </div>
+
+                </div>
+
+
+                <div class="temp-button">
+                    <button data-temp="iniciar">Iniciar</button>
+                    <button data-temp="pausar" disabled>Pausar</button>
+                    <button data-temp="zerar" disabled>Zerar</button>
+                </div>
+            </div>
+
+            
+        </div>
+
+    </div>
+    <audio src="./despertador.mp4"></audio>
+    <script src="./main.js"></script>
+</body>
+
+</html>
